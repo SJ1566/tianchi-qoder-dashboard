@@ -5,9 +5,9 @@
 <meta name="referrer" content="no-referrer">
 <meta name="robots" content="noindex, nofollow">
 <title>2026 Qoder 高校创造力大赛 · 论坛赛道分析看板</title>
-<meta name="description" content="天池赛题 532536 论坛 2154 条帖子的赛道划分、质量评分与三维榜单：StudyHack / LifeHack / Hack4Good / 未明确。">
+<meta name="description" content="天池赛题 532536 论坛 2206 条帖子的赛道划分、质量评分与三维榜单：StudyHack / LifeHack / Hack4Good / 未明确。">
 <meta property="og:title" content="2026 Qoder 高校创造力大赛 · 论坛赛道分析看板">
-<meta property="og:description" content="2154 条帖子的赛道划分、质量评分与三维榜单。">
+<meta property="og:description" content="2206 条帖子的赛道划分、质量评分与三维榜单。">
 <meta property="og:type" content="website">
 <style>
 :root{
@@ -40,26 +40,29 @@ a:hover{color:var(--acc);text-decoration:underline}
 h1,h2,h3{margin:0;font-weight:700}
 
 /* 页头 */
-header{padding:var(--s-6) 0 0;background:linear-gradient(180deg,var(--panel2),var(--bg));border-bottom:1px solid var(--line)}
-.hd{max-width:1180px;margin:0 auto;padding:0 var(--s-5)}
+header{padding:var(--s-4) 0;background:var(--panel);border-bottom:1px solid var(--line)}
+.hd{max-width:1440px;margin:0 auto;padding:0 var(--s-5)}
+.headline{display:flex;justify-content:space-between;align-items:center;gap:var(--s-4)}
+.overline{margin:0 0 3px;color:var(--dim);font-size:var(--f-xs);letter-spacing:.04em}
 h1{font-size:var(--f-xl);letter-spacing:.4px;line-height:1.4}
-.sub{color:var(--dim);font-size:var(--f-sm);margin-top:var(--s-1);line-height:1.7}
-.sub b{color:var(--mid);font-weight:600}
-/* 核心结论条 */
-.take{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(calc(158px*var(--site-space,1)),1fr);gap:1px;background:var(--line);
- border:1px solid var(--line);border-radius:var(--r);overflow-x:auto;overscroll-behavior-inline:contain;margin:var(--s-5) 0 0}
-.take div{background:var(--panel);padding:var(--s-3) var(--s-4);min-width:0}
-.take .n{font-size:calc(24px*var(--site-type,1));font-weight:800;letter-spacing:-.4px;font-variant-numeric:tabular-nums;line-height:1.25;white-space:nowrap}
-.take .l{color:var(--dim);font-size:var(--f-xs);margin-top:var(--s-1);line-height:1.5}
-/* 数据带 */
-.strip{display:flex;flex-wrap:nowrap;gap:calc(18px*var(--site-space,1));padding:var(--s-4) 0 var(--s-5);font-size:calc(12px*var(--site-type,1));color:var(--dim);
- border-top:1px solid var(--line2);margin-top:var(--s-4);overflow-x:auto;scrollbar-width:thin}
-.strip b{color:var(--ink);font-weight:700;font-variant-numeric:tabular-nums;margin-left:5px}
-.strip span{white-space:nowrap;flex:0 0 auto}
+.snapshot{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:4px var(--s-3);font-size:var(--f-sm);color:var(--dim)}
+.snapshot b{color:var(--ink);font-variant-numeric:tabular-nums}
+.scope{margin-top:var(--s-2);font-size:var(--f-sm);color:var(--dim)}
+.scope summary,.metricDetails summary{cursor:pointer;width:fit-content;color:var(--mid)}
+.scope p{margin:var(--s-2) 0 0;max-width:80ch}
+.offline-note{padding:var(--s-2) var(--s-3);border-left:2px solid var(--acc);background:var(--bg)}
+.take{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:var(--s-2);margin:var(--s-4) 0}
+.take>div{background:var(--panel);padding:var(--s-4);min-width:0;border:1px solid var(--line);border-radius:var(--r)}
+.take .n{font-size:calc(23px*var(--site-type,1));font-weight:750;letter-spacing:-.4px;font-variant-numeric:tabular-nums;line-height:1.3;overflow-wrap:anywhere}
+.take .l{color:var(--dim);font-size:var(--f-xs);margin-top:var(--s-2);line-height:1.6}
+.metricDetails{margin:0 0 var(--s-5);font-size:var(--f-sm);border-bottom:1px solid var(--line);padding-bottom:var(--s-3)}
+.strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));gap:var(--s-2) var(--s-4);padding-top:var(--s-3);font-size:var(--f-sm);color:var(--dim)}
+.strip b{color:var(--ink);font-weight:650;font-variant-numeric:tabular-nums;margin-left:var(--s-2)}
+.strip span{display:flex;align-items:baseline;justify-content:space-between;gap:var(--s-2);padding:var(--s-2) 0;border-bottom:1px solid var(--line2);min-width:0}
 
 /* 左侧竖向目录（改版二） */
-.shell{display:grid;grid-template-columns:232px minmax(0,1fr);align-items:start}
-.side{position:sticky;top:0;height:100vh;overflow-y:auto;overflow-x:hidden;border-right:1px solid var(--line);
+.shell{display:grid;grid-template-columns:212px minmax(0,1fr);align-items:start;max-width:1440px;margin:0 auto}
+.side{position:sticky;top:0;max-height:100vh;overflow-y:auto;overflow-x:hidden;border-right:1px solid var(--line);
  background:color-mix(in srgb,var(--site-bg) 86%,var(--site-surface));padding:var(--s-3) calc(10px*var(--site-space,1)) var(--s-4);
  display:flex;flex-direction:column;gap:var(--s-2);scrollbar-width:thin}
 .sideTop{display:flex;align-items:center;justify-content:space-between;padding:0 6px}
@@ -95,9 +98,9 @@ body.side-mini .side{padding-left:calc(6px*var(--site-space,1));padding-right:ca
 }
 
 main{max-width:1180px;margin:0 auto;padding:var(--s-2) var(--s-5) var(--s-7)}
-section{padding:var(--s-6) 0 calc(var(--s-6) - var(--s-1));border-bottom:1px solid var(--line2);scroll-margin-top:calc(52px*var(--site-space,1))}
+section{padding:var(--s-5) 0;border-bottom:1px solid var(--line2);scroll-margin-top:calc(52px*var(--site-space,1))}
 section:last-of-type{border-bottom:0}
-.sh{display:flex;align-items:baseline;gap:calc(10px*var(--site-space,1));margin:0 var(--s-1)}
+.sh{display:flex;align-items:baseline;gap:calc(10px*var(--site-space,1));margin:0 0 var(--s-2)}
 .sh .no{font:700 var(--f-xs)/1 "Helvetica Neue",Arial,sans-serif;letter-spacing:.14em;color:var(--acc);
  border:1px solid color-mix(in srgb,var(--site-accent) 42%,var(--site-bg));background:color-mix(in srgb,var(--site-accent) 16%,var(--site-bg));border-radius:var(--r-sm);padding:var(--s-1) 6px}
 h2{font-size:var(--f-lg);letter-spacing:.2px}
@@ -105,12 +108,12 @@ h2{font-size:var(--f-lg);letter-spacing:.2px}
 .sum b{color:var(--mid);font-weight:600}
 
 /* 卡片与栅格 */
-.g2{display:grid;grid-template-columns:repeat(auto-fit,minmax(calc(320px*var(--site-space,1)),1fr));gap:calc(18px*var(--site-space,1))}
+.g2{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,calc(320px*var(--site-space,1))),1fr));gap:var(--s-4)}
 .g2.hero{grid-template-columns:minmax(0,1.6fr) minmax(0,1fr)}
-.g3{display:grid;grid-template-columns:repeat(auto-fit,minmax(calc(268px*var(--site-space,1)),1fr));gap:var(--s-3)}
-.card{background:linear-gradient(180deg,color-mix(in srgb,var(--panel) 90%,var(--site-fg) 10%) 0,var(--panel) 54px);border:1px solid var(--line);border-radius:var(--r);padding:calc(20px*var(--site-space,1)) calc(20px*var(--site-space,1));min-width:0;box-shadow:inset 0 1px 0 rgba(255,255,255,.035)}
-.card>h3{font-size:calc(13px*var(--site-type,1));color:var(--mid);font-weight:600;margin:0 0 var(--s-3);display:flex;align-items:center;justify-content:space-between;gap:calc(10px*var(--site-space,1))}
-.card>h3 .hint{font-weight:400;color:var(--faint);font-size:var(--f-xs)}
+.g3{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,calc(268px*var(--site-space,1))),1fr));gap:var(--s-3)}
+.card{background:linear-gradient(180deg,color-mix(in srgb,var(--panel) 97%,var(--site-fg) 3%) 0,var(--panel) 70px);border:1px solid var(--line);border-radius:var(--r);padding:calc(20px*var(--site-space,1));min-width:0;box-shadow:inset 0 1px 0 rgba(255,255,255,.025)}
+.card>h3{font-size:var(--f-md);color:var(--mid);font-weight:600;margin:0 0 var(--s-4);display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:var(--s-1) var(--s-3);line-height:1.6}
+.card>h3 .hint{font-weight:400;color:var(--dim);font-size:var(--f-xs)}
 
 /* 图表 */
 .chart{width:100%}
@@ -171,7 +174,14 @@ tbody tr{transition:background var(--t) ease}
 tbody tr:hover{background:var(--panel2)}
 .num{text-align:right;font-variant-numeric:tabular-nums}
 .ctl{display:flex;flex-wrap:wrap;gap:var(--s-2);align-items:center;margin:0 0 var(--s-3)}
-.ctl input[type=search]{background:color-mix(in srgb,var(--site-bg) 72%,var(--site-surface));border:1px solid var(--line);color:var(--ink);border-radius:var(--r-sm);padding:7px calc(11px*var(--site-space,1));width:calc(240px*var(--site-space,1));font-size:var(--f-sm);font-family:inherit}
+.ctl input[type=search]{background:color-mix(in srgb,var(--site-bg) 72%,var(--site-surface));border:1px solid var(--line);color:var(--ink);border-radius:var(--r-sm);padding:9px calc(11px*var(--site-space,1));width:min(100%,calc(320px*var(--site-space,1)));min-width:0;font-size:var(--f-sm);font-family:inherit}
+.ctl #ckQ{width:100%}
+button,input,select,summary{accent-color:var(--acc)}
+button:focus-visible,a:focus-visible,summary:focus-visible{outline:2px solid var(--acc);outline-offset:3px}
+.searchTerms{margin-top:var(--s-3)}
+.searchTerms summary{cursor:pointer;color:var(--mid);font-size:var(--f-sm)}
+.searchTerms summary .hint{color:var(--dim);font-size:var(--f-xs);margin-left:var(--s-2)}
+.searchTerms[open] summary{margin-bottom:var(--s-3)}
 .ctl input[type=search]:focus{outline:2px solid color-mix(in srgb,var(--site-accent) 55%,transparent);outline-offset:1px}
 .ctl .cnt{color:var(--faint);font-size:calc(11.5px*var(--site-type,1))}
 .dead{color:#ff8b7a;font-size:var(--f-xs);font-weight:600;white-space:nowrap}
@@ -181,13 +191,15 @@ tbody tr:hover{background:var(--panel2)}
 /* 问题清单 */
 .prob{display:flex;gap:calc(14px*var(--site-space,1));align-items:flex-start;padding:calc(13px*var(--site-space,1)) 0;border-bottom:1px solid var(--line2)}
 .prob:last-child{border-bottom:0}
-.prob .n{font-size:calc(20px*var(--site-type,1));font-weight:800;font-variant-numeric:tabular-nums;min-width:calc(44px*var(--site-space,1));text-align:right;color:#ffb4a2;line-height:1.35}
+.prob .n{font-size:calc(20px*var(--site-type,1));font-weight:800;font-variant-numeric:tabular-nums;min-width:calc(44px*var(--site-space,1));flex-shrink:0;white-space:nowrap;text-align:right;color:#ffb4a2;line-height:1.35}
 .prob .n.g{color:var(--StudyHack)}
 .prob .b{font-size:calc(13px*var(--site-type,1));font-weight:600;color:var(--ink)}
 .prob .d{font-size:calc(11.5px*var(--site-type,1));color:var(--dim);margin-top:2px;line-height:1.6}
 
 footer{max-width:1180px;margin:0 auto;padding:calc(22px*var(--site-space,1)) var(--s-5) var(--s-7);color:var(--faint);font-size:calc(11.5px*var(--site-type,1));line-height:1.85;border-top:1px solid var(--line)}
 footer b{color:var(--dim);font-weight:600}
+footer summary{cursor:pointer;color:var(--dim);font-size:var(--f-sm)}
+.methodText{margin-top:var(--s-3)}
 
 /* 折叠 */
 .sh{position:relative}
@@ -281,9 +293,69 @@ button.tab{background:var(--panel2);border:1px solid var(--line);color:var(--mid
  transition:border-color var(--t) ease,color var(--t) ease}
 button.tab:hover{border-color:var(--acc);color:var(--ink)}
 .qstat b{color:var(--ink);font-variant-numeric:tabular-nums;font-weight:700}
-@media(max-width:760px){.qrow{grid-template-columns:calc(48px*var(--site-space,1)) 1fr calc(78px*var(--site-space,1));}
- .qrow .x{grid-column:3}}
+@media(max-width:1100px){.take{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:760px){
+ .qrow{grid-template-columns:minmax(0,1fr) minmax(0,1.6fr) minmax(0,1fr) calc(32px*var(--site-space,1));gap:var(--s-2);padding:var(--s-3) 0;border-bottom:1px solid var(--line2)}
+ .qrow .qcell{grid-column:1 / -1;grid-row:2}
+ .qrow .x{grid-column:4;grid-row:1;height:38px}
+ .qrow input,.qrow select{min-height:38px;width:100%}
+}
+@media(max-width:600px){
+ .hd,main,footer{padding-left:var(--s-4);padding-right:var(--s-4)}
+ .headline{align-items:flex-start;flex-direction:column;gap:var(--s-2)}
+ .snapshot{justify-content:flex-start;font-size:var(--f-xs)}
+ .take{grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--s-2)}
+ .take>div{padding:var(--s-3)}
+ .take>div:last-child:nth-child(odd){grid-column:1 / -1;display:flex;align-items:center;gap:var(--s-3)}
+ .take>div:last-child:nth-child(odd) .l{margin-top:0}
+ .take .n{font-size:calc(21px*var(--site-type,1))}
+ .card{padding:var(--s-4)}
+ .card>h3 .hint{display:block;flex-basis:100%}
+ .strip{grid-template-columns:1fr 1fr;gap:var(--s-1) var(--s-3)}
+ .strip span{display:block}
+ .strip b{display:block;margin:0}
+ .side a{min-height:40px}
+ .ctl button.tab{min-height:38px}
+ .ctl input[type=search]{width:100%}
+ .prob{gap:var(--s-3)}
+ .prob>div:last-child{min-width:0;overflow-wrap:anywhere}
+}
 
+.research-workspace{margin-bottom:var(--s-4)}
+.view-controls{display:flex;flex-wrap:wrap;align-items:flex-start;gap:var(--s-2)}
+.view-editor{flex:1 1 240px;min-width:0;font-size:var(--f-sm)}
+.view-editor summary{cursor:pointer;padding:var(--s-2);border:1px solid var(--line);border-radius:var(--r-sm);color:var(--mid)}
+.view-editor[open] summary{margin-bottom:var(--s-2)}
+.view-editor .ctl{margin:var(--s-2) 0 0}
+.view-controls label{display:flex;flex:1 1 190px;min-width:0;flex-direction:column;gap:var(--s-1);font-size:var(--f-sm);color:var(--dim)}
+.view-controls input,.view-controls select,.research-pagination select{width:100%;min-height:38px;background:var(--bg);color:var(--ink);border:1px solid var(--line);border-radius:var(--r-sm);font:inherit;padding:var(--s-2);min-width:0}
+.research-presets{display:flex;flex-wrap:wrap;gap:var(--s-2);margin-top:var(--s-4)}
+.research-notice{color:var(--dim);font-size:var(--f-sm);margin:var(--s-3) 0 0;overflow-wrap:anywhere}
+.research-table-tools{align-items:center}
+.watch-filter{display:inline-flex;align-items:center;gap:6px;font-size:var(--f-sm);color:var(--mid)}
+.row-actions{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.row-actions button,.comparison-pick button{background:transparent;border:1px solid var(--line);border-radius:var(--r-sm);color:var(--dim);padding:3px 8px;font:inherit;font-size:var(--f-xs);cursor:pointer}
+.row-actions button:hover,.row-actions button[aria-pressed=true]{color:var(--acc);border-color:var(--acc)}
+.research-pagination{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:var(--s-2);margin-top:var(--s-3);font-size:var(--f-sm);color:var(--dim)}
+.research-pagination label{display:flex;align-items:center;gap:var(--s-2);white-space:nowrap}
+.research-pagination select{width:auto}
+button:disabled{opacity:.45;cursor:not-allowed}
+.empty-row td{text-align:center;padding:var(--s-6) var(--s-4);color:var(--dim)}
+.empty-row b{color:var(--ink)}
+.empty-row p{white-space:normal}
+.compare-dock{display:flex;align-items:center;justify-content:space-between;gap:var(--s-3);position:sticky;bottom:var(--s-2);z-index:12;background:var(--panel2);border:1px solid color-mix(in srgb,var(--acc) 45%,var(--line));border-radius:var(--r);padding:var(--s-3);margin-top:var(--s-4);box-shadow:0 8px 30px #0005}
+.compare-dock[hidden],#comparisonPanel[hidden]{display:none}
+.compare-dock .ctl{margin:0;flex-shrink:0}
+#comparePicks{display:flex;flex-wrap:wrap;gap:var(--s-2);margin-top:var(--s-2)}
+.comparison-pick{display:inline-flex;align-items:center;gap:6px;min-width:0;max-width:100%;font-size:var(--f-xs);color:var(--mid);overflow-wrap:anywhere}
+.comparison-pick button{flex-shrink:0}
+.comparison-panel{margin-bottom:var(--s-4);scroll-margin-top:72px}
+.comparison-scroll{overflow:auto;max-width:100%}
+.comparison-table{min-width:640px;table-layout:fixed}
+.comparison-table th{position:static;white-space:normal;cursor:default;overflow-wrap:anywhere}
+.comparison-table th:first-child{width:135px}
+.comparison-table td{font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
+@media(max-width:600px){.view-controls label{flex-basis:100%}.compare-dock{align-items:center;flex-wrap:wrap}.compare-dock .ctl{width:auto}#comparePicks{display:none}.research-pagination{justify-content:flex-start}.row-actions button{min-height:30px}.qrow select:first-child{padding-left:6px;padding-right:2px}}
 .caret{display:inline-block;width:14px;color:var(--faint);cursor:pointer;transition:transform var(--t) ease}
 tr.open .caret{transform:rotate(90deg);color:var(--acc)}
 
@@ -299,11 +371,10 @@ tr.open .caret{transform:rotate(90deg);color:var(--acc)}
 <body>
 <div class="tip" id="tip" role="status" aria-live="polite"></div>
 <header><div class="hd">
- <h1>2026 Qoder 高校创造力大赛 · 论坛赛道分析看板</h1>
- <div class="sub">数据源：天池赛题页 <b>532536</b> 论坛，列表接口全量分页 + 逐条抓取正文 · 快照 <b id="genAt"></b><br>
- 口径：作者标题/正文自报赛道计为「明确」，推断结果只用于「未明确」类的主题归类；作品级按「同作者 + 近似标题」去重。<br><b>离线单文件版</b>：全部数据已内嵌，双击即可打开，不需要网络；转发给他人请直接发这个文件而不是链接。</div>
- <div class="take" id="take"></div>
- <div class="strip" id="kpis"></div>
+ <div class="headline"><div><p class="overline">2026 Qoder 高校创造力大赛 · 天池 532536</p><h1>赛道分析看板</h1></div>
+  <div class="snapshot"><span><b>2206</b> 条帖子</span><span>生成时间 <b id="genAt"></b></span></div></div>
+ <details class="scope"><summary>数据口径与隐私说明</summary><p>数据来自天池赛事论坛。标题或正文自报的赛道计为「明确」，推断只用于「未明确」类的主题归类；同作者的近似标题合并为一个作品。质量分是文本代理指标，不代表评委评分；业务数据只保留派生信号，不保存完整正文。</p></details>
+ 
 </div></header>
 
 <div class="shell">
@@ -316,10 +387,12 @@ tr.open .caret{transform:rotate(90deg);color:var(--acc)}
 <main>
  <section id="s-today"><div class="sh"><span class="no">00</span><h2>速览与节奏</h2></div>
   <p class="sum" id="todayNote"></p>
+  <div class="take" id="take" aria-label="核心结论"></div>
+  <details class="metricDetails"><summary>查看全部统计指标</summary><div class="strip" id="kpis"></div></details>
   <div class="card"><h3>相对上一份快照的洞察<span class="hint">自动生成 3-5 条 · 无变化如实显示</span></h3>
    <div id="todayList"></div>
    <div class="ctl" style="margin:var(--s-3) 0 0"><button type="button" class="tab" id="todayCopy">一键复制速览</button></div></div>
-  <p class="sum" style="margin:var(--s-5) 0 var(--s-3)">开赛首日 3 条，<b>11-18 单日 372 条</b>；标题注明赛道的比例最低为 79.7%（11-13）——赶工时最先被丢掉的是标注。</p>
+  <p class="sum" style="margin:var(--s-5) 0 var(--s-3)">开赛首日 3 条，<b>11-18 单日 371 条</b>；标题注明赛道的比例最低为 79.7%（11-13）——赶工时最先被丢掉的是标注。</p>
   <div class="g2 hero">
    <div class="card"><h3>逐日投稿与合规率<span class="hint">柱＝数量 / 线＝合规率</span></h3><div id="daily" class="chart"></div><div class="legend" id="dailyLeg"></div></div>
    <div class="card"><h3>热度日增<span class="hint">相对上一份快照</span></h3><div id="grow" class="chart"></div><div class="legend"><span>柱＝浏览增量（左轴）</span><span>线＝获赞增量（右轴）</span><span class="axis">含新帖带来的累计量</span></div></div>
@@ -339,7 +412,7 @@ tr.open .caret{transform:rotate(90deg);color:var(--acc)}
 
  <section id="s-corr"><div class="sh"><span class="no">02</span><h2>质量与流量</h2></div>
   <p class="sum" id="corrSum"></p>
-  <div class="card"><h3>1974 个作品：质量分 × 浏览量<span class="hint">纵轴对数刻度</span></h3><div id="scatter" class="chart"></div>
+  <div class="card"><h3>2025 个作品：质量分 × 浏览量<span class="hint">纵轴对数刻度</span></h3><div id="scatter" class="chart"></div>
    <div class="legend" id="scatterLeg"></div></div>
   <div class="card" style="margin-top:14px"><h3>质量分怎么算 · 敏感性试验<span class="hint">拖动权重看结论是否稳健</span></h3>
    <div id="qdesign"></div>
@@ -378,11 +451,19 @@ tr.open .caret{transform:rotate(90deg);color:var(--acc)}
     <button type="button" class="tab" id="ckBest">质量最高</button>
     <button type="button" class="tab" id="ckRand">随机需修</button>
    </div>
-   <div id="ckReport"><p class="sum" style="padding:8px 0">空态：输入作品名关键词，或点上面三个快捷按钮选一个作品。</p></div>
+   <div id="ckReport"><p class="sum" style="padding:8px 0">选择一个作品，即可查看合规诊断和修复建议。</p></div>
   </div></section>
 
  <section id="s-data"><div class="sh"><span class="no">07</span><h2>检索与明细</h2></div>
-  <p class="sum">仿知网逻辑检索：<b>字段 + 匹配方式 + 值</b>，条件之间用 <b>* 并且 / + 或者 / - 不含</b> 连接，结果直接联动下方明细表。可检索范围是<b>标题与派生字段</b>（赛道、主题、质量分、浏览、地域、日期等）；<b>正文已按隐私要求整段移除，不提供全文检索</b>。</p>
+  <p class="sum">发现候选作品，保存研究视图，加入关注清单后并排比较；仅检索标题与派生字段。</p>
+  <div class="card research-workspace">
+   <h3>我的研究工作区<span class="hint">视图、关注和对比仅保存在当前浏览器的本站，不跨设备同步</span></h3>
+   <div class="view-controls"><label>已保存视图<select id="viewSelect"><option value="">选择已保存的视图</option></select></label><details class="view-editor"><summary>保存 / 管理视图</summary><label>视图名称<input id="viewName" maxlength="40" placeholder="例如：StudyHack 高质候选"></label><div class="ctl"><button type="button" class="tab" id="saveView" title="同名视图会更新筛选设置">保存 / 更新视图</button><button type="button" class="tab" id="deleteView" disabled>删除视图</button></div></details></div>
+   <div class="research-presets" id="presetViews" role="group" aria-label="快捷研究视图"><button type="button" class="tab" data-preset="all">全部数据</button><button type="button" class="tab" data-preset="links">链接需修</button><button type="button" class="tab" data-preset="potential">高质低曝光</button><button type="button" class="tab" data-preset="recent">最近 7 天</button></div>
+   <p class="research-notice" id="researchNotice" role="status" aria-live="polite">清除浏览器站点数据会删除本地视图和清单；临时筛选会自动恢复。</p>
+  </div>
+  <div class="card comparison-panel" id="comparisonPanel" hidden tabindex="-1"><h3>作品并排对比<button type="button" class="tab" id="closeComparison">收起对比</button></h3><p class="sum">选择2–3个作品，对照同一份快照；质量分仅为文本代理，不代表实际作品评分。</p><div class="comparison-scroll" id="comparisonContent"></div></div>
+  <details class="scope" style="margin-bottom:var(--s-4)"><summary>检索语法说明</summary><p>每行选择字段、匹配方式和值；条件之间使用“* 并且 / + 或者 / - 不含”。支持赛道、主题、质量分、浏览、地域、日期等，点击高频词可直接添加条件。</p></details>
   <div class="card">
    <h3>检索条件<span class="hint" id="qhint">至少一行</span></h3>
    <div class="bld" id="qrows"></div>
@@ -395,26 +476,30 @@ tr.open .caret{transform:rotate(90deg);color:var(--acc)}
    <div class="qexpr" id="qexpr"></div>
    <div class="qstat" id="qstat"></div>
   </div>
-  <div class="card" style="margin-top:14px"><h3>高频词（点一下加一条条件）<span class="hint">按标题词频 · 共 <b id="termN"></b> 个候选</span></h3>
-   <div class="hot" id="hotwords"></div></div>
+  <details class="card searchTerms"><summary>高频词检索<span class="hint">按标题词频 · <b id="termN"></b> 个候选</span></summary>
+   <div class="hot" id="hotwords"></div></details>
   <p class="sum" style="margin:var(--s-5) 0 var(--s-3)"><b>明细表</b> · 表头点击排序（再点反向），与上方检索条件联动；赛道筛选标签和质量分悬停看构成仍可用，窄屏下次要列自动收起。</p>
   <div class="chips" id="chips" style="display:none"></div>
   <div class="ctl"><div class="tabs" id="filters" style="margin:0"></div></div>
-  <div class="ctl"><input type="search" id="q" placeholder="快速过滤：作品名 / 省份 / 主题…"><span class="cnt" id="cnt"></span></div>
+  <div class="ctl research-table-tools"><input type="search" id="q" aria-label="快速过滤作品" maxlength="500" placeholder="快速过滤：作品名 / 省份 / 主题…"><label class="watch-filter"><input type="checkbox" id="watchOnly"> 仅看关注 <b id="watchCount">0</b></label><button type="button" class="tab" id="exportCsv">导出 CSV</button><button type="button" class="tab" id="resetResearch">重置筛选</button></div>
+  <div class="ctl"><span class="cnt" id="cnt" aria-live="polite"></span></div>
   <div class="tbox"><table id="tb"><thead><tr>
    <th data-k="t">作品</th><th data-k="c">赛道</th><th data-k="lv" title="作品链接 HEAD 探活：✓ 可访问 / ✗ 失效 / ? 待确认 / — 无链接">链接</th><th data-k="q" class="num">质量</th><th data-k="v" class="num">浏览</th>
    <th data-k="dv" class="num" title="相对上一份快照的增量：浏览 / 赞">日增</th><th data-k="u" class="num">赞</th><th data-k="five" class="num">五要素</th><th data-k="img" class="num">图</th>
    <th data-k="len" class="num">字数</th><th data-k="d">发布</th><th data-k="p">地域</th>
-  </tr></thead><tbody></tbody></table></div></section>
+  </tr></thead><tbody></tbody></table></div>
+  <div class="research-pagination"><label>每页 <select id="pageSize"><option value="25">25 条</option><option value="50" selected>50 条</option><option value="100">100 条</option></select></label><span id="pageInfo" role="status"></span><div><button type="button" class="tab" id="prevPage">上一页</button><button type="button" class="tab" id="nextPage">下一页</button></div></div>
+  <div class="compare-dock" id="compareDock" hidden><div><b>待对比 <span id="compareCount">0 / 3</span></b><div id="comparePicks"></div></div><div class="ctl"><button type="button" class="tab" id="openComparison" disabled>查看对比</button><button type="button" class="tab" id="clearComparison">清空选择</button></div></div>
+ </section>
 </main>
 
-<footer><b>方法与口径</b> · 列表接口 <code>requestType=race</code>、<code>pageSize=200</code> 全量分页取到 <span id="ftn"></span> 条帖子 ID（<code>requestType=all</code> 实测返回空），再逐条调用 <code>post/details</code> 抽取赛道声明、五要素、链接、截图数与篇幅；正文中的账号等敏感字段不参与统计。<br>
+<footer><details><summary>方法与指标说明</summary><div class="methodText"><b>方法与口径</b> · 列表接口 <code>requestType=race</code>、<code>pageSize=200</code> 全量分页取到 <span id="ftn"></span> 条帖子 ID（<code>requestType=all</code> 实测返回空），再逐条调用 <code>post/details</code> 抽取赛道声明、五要素、链接、截图数与篇幅；正文中的账号等敏感字段不参与统计。<br>
 <b>去重</b> · 同作者 + 近似标题合并，保留浏览量最高的一条；作者昵称仅用于去重键，已做哈希匿名化，页面不展示也不参与搜索。<b>日增</b> · 与上一份每日快照相比的浏览/点赞增量，新帖无基线时显示「新」。<b>质量分</b> · 官方「评分关注点 + 提交清单」的文本代理指标，未实际打开作品站点体验。<br>
-生成脚本 build_dashboard.js · 截止 11-30 后重跑即可刷新</footer>
+生成脚本 build_dashboard.js · 截止 11-30 后重跑即可刷新</div></details></footer>
  </div>
 </div>
 
-<script>const HERO={"genAt":"2026/11/19 20:46:15","n":2154,"take":[["1716 / 1977","自报赛道的作品（86.8%）"],["0.126","质量 × 浏览量相关系数（对数轴）"],[261,"未标注，需补标归类"],["96.4%","作品链接可访问率（HEAD 实测）"],[66,"链接需修：需登录/失效/写法有误"]],"kpis":[["论坛总帖",2154],["作品帖",2130],["去重后作品",1977],["非作品帖",24],["重复发帖",153],["质量中位",65],["浏览合计","255,409"],["获赞合计",804],["较 11-18 浏览","+86,285"],["较 11-18 获赞","+239"],["投稿天数","22 天"]]};
+<script>const HERO={"genAt":"2026/11/19 22:37:50","n":2206,"take":[["1757 / 2029","自报赛道的作品（86.6%）"],["0.118","质量 × 浏览量相关系数（对数轴）"],[272,"未标注，需补标归类"],["96.5%","作品链接可访问率（HEAD 实测）"],[66,"链接需修：需登录/失效/写法有误"]],"kpis":[["论坛总帖",2206],["作品帖",2182],["去重后作品",2029],["非作品帖",24],["重复发帖",153],["质量中位",65],["浏览合计","262,805"],["获赞合计",821],["较 11-18 浏览","+93,670"],["较 11-18 获赞","+256"],["投稿天数","22 天"]]};
 (function(){var g=document.getElementById("genAt");if(g)g.textContent=HERO.genAt;var f=document.getElementById("ftn");if(f)f.textContent=HERO.n;var t=document.getElementById("take");if(t)t.innerHTML=HERO.take.map(function(x){return '<div><div class="n">'+x[0]+'</div><div class="l">'+x[1]+'</div></div>';}).join("");var k=document.getElementById("kpis");if(k)k.innerHTML=HERO.kpis.map(function(x){return '<span>'+x[0]+'<b>'+x[1]+'</b></span>';}).join("");var n=document.getElementById("todayNote");if(n)n.textContent="数据加载中…（首屏已就绪，明细与图表稍后补全）";})();
 window.addEventListener("DOMContentLoaded",function(){fetch("data.json",{cache:"no-store"}).then(function(r){if(!r.ok)throw new Error("HTTP "+r.status);return r.json();}).then(function(d){if(window.__startDashboard)window.__startDashboard(d);}).catch(function(e){var n2=document.getElementById("todayNote");if(n2)n2.textContent="数据加载失败："+e.message+"（请刷新重试）";});});</script>
 <script defer src="app.js"></script></body></html>
